@@ -67,6 +67,7 @@ function loadTokens() {
     var params = 'grant_type=authorization_code';
     params += '&code=' + code;
     params += '&client_id=' + clientId;
+    params += '&client_secret=zaOCV4fR9BOV0O7y0w5Q1VKCxhDA8Kpq';
     params += '&redirect_uri=' + document.location.href.split('?')[0];
 
     var req = new XMLHttpRequest();
@@ -109,6 +110,7 @@ function refreshTokens() {
     var params = 'grant_type=refresh_token';
     params += '&refresh_token=' + state.refreshToken;
     params += '&client_id=' + clientId;
+    params += '&client_secret=zaOCV4fR9BOV0O7y0w5Q1VKCxhDA8Kpq';
     params += '&scope=openid';
 
     var req = new XMLHttpRequest();
