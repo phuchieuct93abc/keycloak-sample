@@ -33,11 +33,12 @@ function generateAuthorizationRequest() {
 
     req += '?client_id=' + clientId;
     req += '&response_type=code';
+    req += '&client_secret=mlWgyY4afqsHr1sTQzmejLHaDTqzjaIj';
     req += '&redirect_uri=' + document.location.href.split('?')[0];
     if ('' !== scope) {
         req += '&scope=' + scope;
     }
-
+    console.log(req)
     document.location.href = req;
 }
 
@@ -48,6 +49,7 @@ function loadTokens(code) {
     var params = 'grant_type=authorization_code';
     params += '&code=' + code;
     params += '&client_id=' + clientId;
+    params += '&client_secret=mlWgyY4afqsHr1sTQzmejLHaDTqzjaIj';
     params += '&redirect_uri=' + document.location.href.split('?')[0];
 
     var req = new XMLHttpRequest();

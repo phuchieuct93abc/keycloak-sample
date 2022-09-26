@@ -9,6 +9,6 @@ services:
       - 8080:8080
     command: [ "start-dev"]
     volumes:
-      - keycloak_2:/opt/jboss/keycloak/standalone/data/
+      - keycloakVolume:/opt/keycloak/data
 volumes:
-  keycloak_2:
+  keycloakVolume:
